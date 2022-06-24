@@ -6,7 +6,10 @@ This repository contains the implementation of the solution of Assignment 1 COMP
 The main goal of this assignment is to develop a system that can efficiently process the large bigTwitter.json JSON file (20+ GB file containing the 5 million tweets) in parallel and count the number of tweets as well as the top 10 most frequent languages for each grid in Sydney as defined in the assignment specification. The challenge is to develop a time- and memory-efficient code by utilizing parallel processing techniques.
 
 ## Implementation. 
+The implementation is done by virtual dividing the file through read pointers and assigning them to child processes. Each child process then use pandas library to batch process the designated section of the tweets and computes the results. The results are then collected at the parent process where they are combined in an appropriate manner.   
 
 ## Benchmark results. 
 
 ## Critical Analysis
+
+Batch processing was essential to make the program memory efficient however it had a toll on compute efficiency. Despite the fact that the whole application took respectable 73 seconds to analyze 5 million tweets as shown in the above section, it is still not computationally efficient and some other avenues can be explored that shortens the time required to complete the job.  
