@@ -1,1 +1,1 @@
-# MultiProcesser-Tweet-Analyzer-MPI
+# MultiProcesser Big Data Tweet Analyzer using Python's MPI library.
