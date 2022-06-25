@@ -26,3 +26,10 @@ The implementation is done by virtually dividing the file through read pointers 
 
 ## Benchmark results. 
 
+We tested our code for 4 different settings of batch processing size (defined earlier): 100, 1000, 10000, 10000 on each of the 3 resource configurations - 1 node with 1 core, 1 node with 8 core, and 2 nodes with 8 core (4 core for each). Figure 1 above shows the execution times (in sec), measured from the start of the script till the end for the root processor, for all 12 runs.
+
+![image](https://user-images.githubusercontent.com/12232515/175774065-fd8012ab-35ae-44f5-b296-851d64ed8d8c.png)
+
+We can easily confirm the effect of parallelization from these results. As expected, we observe worst (slowest) performances for 1 node with 1 core across all batch sizes, ranging from 562 seconds to 1290 seconds. Execution times for 1 node with 8 cores and 2 nodes with 8 cores are generally similar although 1 node with 8 cores consistently outperform the 2 node counterpart by a small amount, which is expected due to possible communication overhead between two nodes.
+
+Furthermore, we identify 1000 as the optimal batch size out of the four candidates, as the execution times for all three resource settings are the smallest compared to those with different batch sizes. While we have only tested a small number of batch sizes, this still provides valuable information in that a sweet-spot (in terms of execution time) in batch size does seem to exist, as we see having unnecessarily small (100) or large (100000) batch sizes result in much slower execution times.
