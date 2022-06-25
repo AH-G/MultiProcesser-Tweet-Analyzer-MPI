@@ -1,4 +1,4 @@
-# MultiProcesser Big Data Tweet Analyzer using Python's MPI library for University of Melbourne's HPC system, Spartan. 
+# MultiProcesser Parallelized Big Data Tweets Analyzer using Python's MPI library for University of Melbourne's HPC system, Spartan. 
 
 This repository contains the implementation of the solution of Assignment 1 COMP90024: Cluster and Cloud Computing studied at the University of Melbourne. In this assignment, we were required to develop an efficient multiprocessor based solution to analyze around 5 million tweets to identify the dominant ethnicity of people in different areas of Sydney. The assignment's description along with the our assignment's report is provided within the repository. All the benchmarks mentioned within the report are performed on University of Melbourne's High Performance Computing (HPC) cluster system known as Spartan. This readme file contains summary of the report. 
 
