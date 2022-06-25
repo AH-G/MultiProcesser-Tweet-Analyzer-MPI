@@ -10,6 +10,3 @@ The implementation is done by virtual dividing the file through read pointers an
 
 ## Benchmark results. 
 
-## Critical Analysis
-
-Batch processing was essential to make the program memory efficient however it had a toll on compute efficiency. Despite the fact that the whole application took respectable 73 seconds to analyze 5 million tweets as shown in the above section, it is still not computationally efficient and some other avenues can be explored that shortens the time required to complete the job.  
